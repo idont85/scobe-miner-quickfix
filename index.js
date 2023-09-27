@@ -4,6 +4,7 @@ var bd = 0;
 var scoobies = 0;
 var fake = true;
 var scoobprice = 0;
+var counttheclicks = 0;
 
 function startUp() {
   var initial = +localStorage.getItem("clicks") || 0; // Initialize to 0 if not found
@@ -13,7 +14,8 @@ function startUp() {
 
   document.getElementById("counter").innerHTML = initial;
   counter = initial;
-
+  counttheclicks = +localStorage.getItem('counttheclicks');
+  document.getElementById('counttheclicks').innerHTML = "You have clicked "  + counttheclicks + " times"
 
 
   if (bbornot == 1) {
@@ -51,6 +53,9 @@ function goClick() {
   counter = counter + cbb;
   document.getElementById("counter").innerHTML = counter;
   localStorage.setItem("clicks", counter);
+  counttheclicks = counttheclicks + 1
+  localStorage.setItem('counttheclicks', counttheclicks)
+  document.getElementById('counttheclicks').innerHTML = "You have clicked "  + counttheclicks + " times"
 }
 
 function getBb() {
