@@ -130,3 +130,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#counttheclicks {
+    font-family: 'Manrope', sans-serif;
+}
+
+#counting {
+    float: right;
+    top: 0px;
+    right: 0px;
+}
